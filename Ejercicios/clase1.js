@@ -1,7 +1,7 @@
 //Calculadora
 let dato1 = prompt("Ingrese un numero: ");
 let dato2 = prompt("Ingrese otro numero: ");
-let operacion = prompt("Elija una operacion a realizar: + , - , * , / ")
+let operacion = prompt("Elija una operacion a realizar: Sumar + , Restar - ,Multiplicar * , Dividir / ")
 
 
 let numero1 = parseInt(dato1);
