@@ -1,6 +1,6 @@
-
+ 
 let valor = 0
-    
+
 while (valor <= 4){
     //el codigo se ejecuta de forma repetitiva hasta que ya no se cumpla la condicion
     console.log("Valor es igual a " + valor);
@@ -12,4 +12,4 @@ while (valor <= 4){
     }
     valor ++ ;
 
-}
+} 

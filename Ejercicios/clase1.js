@@ -1,11 +1,10 @@
 //Calculadora
-let dato1 = prompt("Ingrese un numero: ");
-let dato2 = prompt("Ingrese otro numero: ");
+let dato1 = parseInt(prompt("Ingrese un numero: "));
+let dato2 = parseInt(prompt("Ingrese otro numero: "));
 let operacion = prompt("Elija una operacion a realizar: Sumar + , Restar - ,Multiplicar * , Dividir / ")
 
 
-let numero1 = parseInt(dato1);
-let numero2 = parseInt(dato2);
+
 
 let resultado = null;
 let texto = null;
