@@ -1,0 +1,47 @@
+.h1{
+    text-align: center;
+    background-color: rgb(66, 131, 60);
+}
+
+body{
+    min-height: 100vh;
+}
+
+
+/*Modal */
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+#modal{
+    width: 400px;
+    height: 500px;
+    background-color: silver;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.modal-active{
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+}
+
+.invalido{
+    color: red
+}
+
+.valido{
+    border : green 1px solid
+}
