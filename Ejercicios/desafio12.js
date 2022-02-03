@@ -98,7 +98,7 @@ $(`#btn2${producto.id}`).on('click', function () {
    <p>Desafio 12 realizado por Christian Zamora Hermida</p>
    </footer>
    `);
-   $('footer').css({background:'red'},{color: 'white'});
+   $('footer').css({background:'red',color: 'white'});
    $('p').addClass('text-center');
 
 
