@@ -3,9 +3,10 @@ $(document).ready(function () {
 
 
 const productos = [{ id: 1, nombre: "Arroz", precio: 125 , descrip: "Arroz Gallo Oro , paquete de 1kg"},
-{ id: 2, nombre: "Fideo", precio: 70 , descrip: "Fideo de 500gr" },
+{ id: 2, nombre: "Fideo", precio: 70 , descrip: "Fideo de 500gr (no se pasa nunca)" },
 { id: 3, nombre: "Pan" , precio: 50 , descrip: "1kg de pan integral"},
-{ id: 4, nombre: "Flan" , precio: 100 , descrip: "Flan casero"}];
+{ id: 4, nombre: "Flan" , precio: 100 , descrip: "Flan casero"},
+{ id: 5, nombre: "Milanesa" , precio: 200, descrip: "Milanesa de Pollo"}];
 
 // Recorremos el array con for..of
 for (const producto of productos) {
@@ -14,23 +15,29 @@ for (const producto of productos) {
  $(".container").append(`<div class="card" style="width: 18rem;">
  <div class="card-body">
    <h5 class="card-title">Producto: ${producto.nombre}</h5>
+   <hr>
    <h6 class="card-subtitle mb-2 text-muted">$ ${producto.precio}</h6>
    <p class="card-text">${producto.descrip}</p>
-   <button type="button" id="btn${producto.id}" class="btn btn-success">Pagar</button>
-   <button type="button" id="btn2${producto.id}" class="btn btn-danger">Cancelar</button>
+    
+   <button id="btn${producto.id}" class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Comprar</button>
+   <button id="btn2${producto.id}" class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Cancelar</button>
  </div>
 </div>`);
- //Boton Comprar
+
+//Boton Comprar
     $(`#btn${producto.id}`).on('click', function () {
-    alert(`Compraste ${producto.nombre} por $ ${producto.precio}`);});
+    $('.offcanvas-title').html("<h5>Detalles de su compra</h5>");
+    $('.offcanvas-body').html(`Compraste ${producto.nombre} por $ ${producto.precio}`)
+    //alert(`Compraste ${producto.nombre} por $ ${producto.precio}`);
+});
 //boton cancelar
-$(`#btn2${producto.id}`).on('click', function () {
-     alert(`Cancelaste la compra de ${producto.nombre}`)});
-    
-    
+$(`#btn2${producto.id}`).click(function (e) { 
+    e.preventDefault();
+    $('.offcanvas-title').html("<h5>Detalles de su compra</h5>")
+    $('.offcanvas-body').html(`Ha elegido cancaelar la compra de ${producto.nombre}`)}); 
 
-
-    };          
+    };  
+           
     
     //header
     $('header').prepend(`<img src="https://freshlabbatavia.com/wp-content/uploads/2017/07/cooking-header.jpg" class="img-fluid" alt="Comida">`);
